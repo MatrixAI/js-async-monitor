@@ -1,8 +1,5 @@
 # js-async-monitor
 
-staging:[![pipeline status](https://gitlab.com/MatrixAI/open-source/js-async-monitor/badges/staging/pipeline.svg)](https://gitlab.com/MatrixAI/open-source/js-async-monitor/commits/staging)
-master:[![pipeline status](https://gitlab.com/MatrixAI/open-source/js-async-monitor/badges/master/pipeline.svg)](https://gitlab.com/MatrixAI/open-source/js-async-monitor/commits/master)
-
 Asynchronous monitor.
 
 Because decorators are experimental, you must enable: `"experimentalDecorators": true` in your `tsconfig.json` to use this library.
@@ -15,7 +12,7 @@ npm install --save @matrixai/async-monitor
 
 ## Development
 
-Run `nix-shell`, and once you're inside, you can use:
+Run `nix develop`, and once you're inside, you can use:
 
 ```sh
 # install (or reinstall packages from package.json)
