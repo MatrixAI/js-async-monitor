@@ -56,7 +56,10 @@ function lock(...requests: Array<MultiLockRequest>) {
     } else if (descriptor.set != null) {
       kind = 'set';
     }
-    const f: Function = descriptor[kind]; // eslint-disable-line @typescript-eslint/ban-types
+
+    type AnyFn = (...args: unknown[]) => unknown;
+
+    const f = descriptor[kind] as AnyFn;
     if (typeof f !== 'function') {
       throw new TypeError(`${key} is not a function`);
     }
