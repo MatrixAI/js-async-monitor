@@ -57,7 +57,7 @@ function lock(...requests: Array<MultiLockRequest>) {
       kind = 'set';
     }
 
-    type AnyFn = (...args: unknown[]) => unknown;
+    type AnyFn = (...args: Array<unknown>) => unknown;
 
     const f = descriptor[kind] as AnyFn;
     if (typeof f !== 'function') {
